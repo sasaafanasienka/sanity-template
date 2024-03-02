@@ -1,7 +1,8 @@
 import React from 'react'
+import classes from './Section.module.scss';
 
-export const Section = () => {
+export const Section = ({children}) => {
   return (
-    <div>Section</div>
+    <section className={classes.section}>{children}</section>
   )
 }

@@ -1,6 +1,10 @@
+//pre-created normalize.scss
 @import './normalize/normalize.scss';
 
+//digital-butlers custom resetting
 @import './variables/pallette.scss';
+
+@import './reset/reset.scss';
 
 body {
   display: flex;
@@ -12,4 +16,11 @@ body {
 
 main {
   flex-grow: 1;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  letter-spacing: -0.05em;
 }
