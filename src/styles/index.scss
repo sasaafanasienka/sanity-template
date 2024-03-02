@@ -1,0 +1,15 @@
+@import './normalize/normalize.scss';
+
+@import './variables/pallette.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100svh;
+  background-color: var(--color-light);
+}
+
+main {
+  flex-grow: 1;
+}
