@@ -1,14 +1,23 @@
 import React from 'react'
-import { Flex, Input, Select } from '@mantine/core'
 import Link from 'next/link'
+import { Container } from '@/shared/ui'
+import './Footer.scss'
 
 export const Footer = () => {
   return (
-    <footer>
-      <Flex>
-         <Link href='/'>Main page</Link>
-      </Flex>
-      <div>Book</div>
+    <footer className='footer'>
+      <Container>
+        <div className='flex justify-between'>
+          <div className='flex items-center gap-4 flex-wrap'> 
+            <Link className='text-nowrap' href='/'>Main page</Link>
+            <Link className='text-nowrap' href='/'>Main page</Link>
+            <Link className='text-nowrap' href='/'>Main page</Link>
+          </div>
+          <div>
+            Sasa Afanasienka
+          </div>
+        </div>
+      </Container>
     </footer>
   )
 }
