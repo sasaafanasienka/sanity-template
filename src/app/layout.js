@@ -14,16 +14,16 @@ const theme = createTheme()
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <head>
-          <ColorSchemeScript/>
-        </head>
+      <head>
+        <ColorSchemeScript />
+      </head>
+      <body className={inter.className}>
         <MantineProvider theme={theme}>
-        <body className={inter.className}>
-          <Navbar/>
+          <Navbar />
           {children}
-          <Footer/>
-        </body>
-    </MantineProvider>
-      </html>
+          <Footer />
+        </MantineProvider>
+      </body>
+    </html>
   );
 }
