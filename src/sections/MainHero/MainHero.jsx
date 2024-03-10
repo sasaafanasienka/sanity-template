@@ -14,7 +14,7 @@ export const MainHero = () => {
           </div>
           <div className='flex align-center justify-center gap-4'>
             <Link href='/library'>
-              <Button>Explore components library</Button>
+              <Button>Buttons</Button>
             </Link>
           </div>
         </div>

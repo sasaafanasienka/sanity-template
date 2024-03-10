@@ -1,18 +1,75 @@
 @use 'sass:color';
 
 .button {
-  font-size: 1rem;
-  padding: 0.75em 1.25em;
-  background-color: var(--color-accent);
-  border: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
   outline: none;
   border-radius: 0.5em;
   font-weight: 500;
   letter-spacing: -0.02em;
-  color: var(--color-light);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  &:hover {
+  padding: 0.75em 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  //sizes
+  &--xl {
+    font-size: 1.5rem;
+  }
+  &--lg {
+    font-size: 1.125rem;
+  }
+  &--md {
+    font-size: 1rem;
+  }
+  &--sm {
+    font-size: 0.875rem;
+  }
+  &--xs {
+    font-size: 0.75rem;
+  }
+  //colors
+  &--base {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-accent-80);
+    }
+  }
+  &--dark {
     background-color: var(--color-dark);
+    color: var(--color-light);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-dark-80);
+    }
+  }
+  &--light {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-light-80);
+    }
+  }
+  &--white {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-light-20);
+    }
+  }
+  &--outline {
+    background-color: var(--color-accent-0);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    cursor: pointer;
+    &:hover {
+      border: 1px solid var(--color-accent);
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
   }
 }
