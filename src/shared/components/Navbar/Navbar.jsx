@@ -2,6 +2,7 @@ import { Button, Container } from '@/shared/ui'
 import Link from 'next/link'
 
 import './Navbar.scss';
+import { Flex } from '@mantine/core';
 
 export const Navbar = () => {
   return (
@@ -18,11 +19,17 @@ export const Navbar = () => {
             <path d="M78.5714 22.6154H100V1.38462H78.5714V22.6154ZM83.9297 6.69123H94.6439V17.3066H83.9275L83.9297 6.69123Z" fill="var(--color-accent)"/>
             </svg>
           </Link>
-          <div>
+          <Flex gap={8}>
+            <Link href='/studio'>
+              <Button variant='outline'>Studio</Button>
+            </Link>
+            <Link href='/blog'>
+              <Button>Blog</Button>
+            </Link>
             <Link href='/library'>
               <Button>Explore library</Button>
             </Link>
-          </div>
+          </Flex>
         </div>
       </Container>
     </header>

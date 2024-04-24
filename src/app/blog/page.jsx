@@ -1,10 +1,17 @@
 import { Container, Section } from "@/shared/ui"
+import { client } from "@/utils/sanity"
+// import {client} from '@/utils/sanity/client/client';
 
-const Blog = () => {
+const Blog = async () => {
+
+  const posts = await client.fetch(`*[_type == "post"]{ title, slug }`)
+
   return <>
     <Section>
       <Container>
-        <div>blog</div>
+        {(posts || []).map((post) => (
+          <div>{post.title}</div>
+        ))}
       </Container>
     </Section>
   </>

@@ -1,5 +1,6 @@
 import { Inter, Roboto } from "next/font/google";
 import { Footer, Navbar } from "@/shared/components";
+import { client } from "@/utils/sanity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,6 +10,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <main>
       {children}
