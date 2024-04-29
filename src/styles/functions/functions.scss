@@ -1,0 +1,6 @@
+@function adapt($minValue, $maxValue, $fromWidth: 480, $toWidth: 1440) {
+  $slope: ($maxValue - $minValue) / ($toWidth - $fromWidth);
+  $yIntercept: $minValue - $slope * $fromWidth;
+  $result: clamp(#{$minValue / 16}rem, #{$yIntercept / 16}rem + #{$slope * 100}vw, #{$maxValue / 16}rem);
+  @return $result;
+}

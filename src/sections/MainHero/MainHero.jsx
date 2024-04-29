@@ -3,6 +3,7 @@ import React from 'react'
 import './MainHero.scss'
 import Link from 'next/link'
 import { client } from '@/utils/sanity'
+import { Title } from '@mantine/core'
 
 export const MainHero = async () => {
 
@@ -15,7 +16,7 @@ export const MainHero = async () => {
       <Container className="flex flex-col grow w-full">
         <div className="hero">
           <div className='flex flex-col gap-4'>
-            <h1 className="hero__heading">{page.title}</h1>
+            <h1 className="heading heading--xl">{page.title}</h1>
             <p className='hero__subheading'>{page.description}</p>
           </div>
           <div className='flex align-center justify-center gap-4'>

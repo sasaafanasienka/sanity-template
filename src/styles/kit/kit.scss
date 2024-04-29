@@ -1,0 +1,42 @@
+.body {
+  font-family: Inter;
+  font-size: 1rem;
+  line-height: 1.6em;
+  letter-spacing: -0.04em;
+}
+
+.heading {
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin: 0;
+  &--xl {
+    font-size: adapt(40, 120);
+  }
+  &--lg {
+    font-size: adapt(32, 64);
+  }
+  &--md {
+    font-size: adapt(24, 36);
+  }
+  &--sm {
+    font-size: adapt(20, 24);
+  }
+  &--xs {
+    font-size: adapt(14, 16);
+  }
+  &--xxs {
+    font-size: adapt(12, 14);
+  }
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.link {
+  color: inherit;
+  &:hover {
+    color: var(--color-accent)
+  }
+}

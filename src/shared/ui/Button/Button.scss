@@ -14,16 +14,16 @@
   gap: 0.5em;
   //sizes
   &--xl {
-    font-size: 1.5rem;
+    font-size: adapt(20, 24);
   }
   &--lg {
-    font-size: 1.125rem;
+    font-size: adapt(16, 18);
   }
   &--md {
-    font-size: 1rem;
+    font-size: adapt(14, 16);
   }
   &--sm {
-    font-size: 0.875rem;
+    font-size: adapt(12, 14);
   }
   &--xs {
     font-size: 0.75rem;
