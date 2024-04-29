@@ -19,7 +19,7 @@ export const Navbar = () => {
             <path d="M78.5714 22.6154H100V1.38462H78.5714V22.6154ZM83.9297 6.69123H94.6439V17.3066H83.9275L83.9297 6.69123Z" fill="var(--color-accent)"/>
             </svg>
           </Link>
-          <Flex gap={8}>
+          <div className='flex gap-2'>
             <Link href='/studio'>
               <Button variant='outline'>Studio</Button>
             </Link>
@@ -29,7 +29,7 @@ export const Navbar = () => {
             <Link href='/library'>
               <Button>Explore library</Button>
             </Link>
-          </Flex>
+          </div>
         </div>
       </Container>
     </header>
