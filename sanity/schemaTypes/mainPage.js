@@ -4,6 +4,11 @@ export const mainPage = {
   type: 'document',
   fields: [
     {
+      name: 'tag',
+      title: 'Tag',
+      type: 'string',
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -29,6 +34,16 @@ export const mainPage = {
         }
       ]
     },
+    {
+      name: 'mainimage',
+      title: 'Main Image',
+      type: 'image',
+    },
+    {
+      name: 'lottie',
+      title: 'Lottie',
+      type: 'file'
+    }
   ],
 
   preview: {
