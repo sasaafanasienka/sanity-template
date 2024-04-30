@@ -6,7 +6,7 @@ import { client } from '@/utils/sanity'
 
 export const MainHero = async () => {
 
-  const mainPages = await client.fetch(`*[_type == "MainPage"]{title, description, buttons, mainimage,tag}`) 
+  const mainPages = await client.fetch(`*[_type == "MainPage"]`) 
   const page = mainPages[0]
   console.log(page)
 
@@ -18,7 +18,7 @@ export const MainHero = async () => {
             <p className='paragraph'>{page.tag}</p>
             <h1 className="heading heading--xl">{page.title}</h1>
             <p className='paragraph'>{page.description}</p>
-            <img className='hero__image' src={page.mainimage?.asset?._ref} alt=''></img>
+            <img className='hero__image' data-src={page.mainimage?.asset?._ref} src={`https://cdn.sanity.io/images/zp7mbokg/production/${page.mainimage?.asset?._ref}`} alt='' width={1000} height={600}></img>
           </div>
           <div className='flex align-center justify-center gap-2'>
             {page.buttons.map((button) => (
