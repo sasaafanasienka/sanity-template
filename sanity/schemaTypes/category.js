@@ -1,17 +1,6 @@
-export const category = {
-  name: 'category',
-  title: 'Category',
-  type: 'document',
-  fields: [
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-    },
-  ],
-}
+import { document, field } from "../../utils"
+
+export const category = document.create('Category', [
+  field.string('Title'),
+  field.string('Description'),
+])
