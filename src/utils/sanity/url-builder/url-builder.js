@@ -6,6 +6,12 @@ const DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET
 const builder = imageUrlBuilder({projectId: PROJECT_ID, dataset: DATASET})
 export const urlImage = (source) => builder.image(source)
 export const urlFile = (source) => {
+  console.log('Source', source)
   const [type, path, format] = source.split('-');
-  return `https://cdn.sanity.io/${type}/${PROJECT_ID}/${DATASET}/${path}.${format}`
+
+  const types = {
+    file: 'files'
+  }
+
+  return `https://cdn.sanity.io/${types[type] ?? 'files'}/${PROJECT_ID}/${DATASET}/${path}.${format}`
 }

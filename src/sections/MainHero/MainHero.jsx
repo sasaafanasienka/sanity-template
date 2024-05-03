@@ -2,7 +2,7 @@ import { Section, Container, Button } from '@/shared/ui'
 import React from 'react'
 import './MainHero.scss'
 import { client } from '@/utils/sanity'
-import { Img, Lottie } from '@/shared/components'
+import { Img, Lottie } from '@/shared/lib'
 
 export const MainHero = async () => {
 
@@ -18,14 +18,9 @@ export const MainHero = async () => {
             <h1 className="heading heading--xl">{page.title}</h1>
             <p className='paragraph'>{page.description}</p>
             <Img responsive className='hero__image' image={page.mainImage} w={400}></Img>
-            {/* <Lottie lottie={page.lottie}></Lottie> */}
-          </div>
-          <div className='flex align-center justify-center gap-2'>
-            {/* {page.buttons.map((button) => (
-              <Link href={button.Link} key={button._key}>
-                <Button>{button.Text}</Button>
-              </Link>
-            ))} */}
+            <div style={{ width: '300px', height: '200px', position: 'relative' }}>
+              <Lottie lottie={page.lottie}/>  
+            </div>
           </div>
         </div>
       </Container>
