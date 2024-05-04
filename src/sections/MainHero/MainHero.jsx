@@ -2,12 +2,14 @@ import { Section, Container, Button } from '@/shared/ui'
 import React from 'react'
 import './MainHero.scss'
 import { client } from '@/utils/sanity'
-import { Img, Lottie } from '@/shared/lib'
+import { Img, Lottie, Video } from '@/shared/lib'
 
 export const MainHero = async () => {
 
   const mainPages = await client.fetch(`*[_type == "mainPage"]` )
   const page = mainPages[0]
+
+  console.log(page)
 
   return (
     <Section className="pt-0 grow flex flex-col">
@@ -21,6 +23,7 @@ export const MainHero = async () => {
             <div style={{ width: '300px', height: '200px', position: 'relative' }}>
               <Lottie lottie={page.lottie}/>  
             </div>
+            <Video video={page.videoInstruction} />
           </div>
         </div>
       </Container>

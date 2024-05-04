@@ -1,7 +1,6 @@
 'use client'
 
 import { urlFile } from '@/utils/sanity';
-import { Loader } from '@mantine/core';
 import lottieWeb from 'lottie-web';
 import { useEffect, useRef, useState } from 'react';
 import './Lottie.scss';

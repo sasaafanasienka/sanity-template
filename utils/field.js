@@ -1,3 +1,5 @@
+import { config } from "next/dist/build/templates/pages";
+
 export class Field {
 
   _toCamelCase = (str) => {
@@ -26,9 +28,21 @@ export class Field {
     ...config
   })
 
+  video = (str) => ({
+    name: this._toCamelCase(str),
+    title: str,
+    type: 'file',
+    // fields: [
+    //   this.string('Caption'),
+    //   this.image('Poster')
+    // ],
+    ...config
+  })
+
   file = (str) => ({
     name: this._toCamelCase(str),
     title: str,
     type: 'file',
+    ...config
   })
 }
