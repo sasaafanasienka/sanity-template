@@ -1,6 +1,8 @@
-import { Container, Section } from "@/shared/ui"
-import { client } from "@/utils/sanity"
+// import { Container, Section } from "@/shared/ui"
+// import { client } from ""
 // import {client} from '@/utils/sanity/client/client';
+
+
 
 const Blog = async () => {
 

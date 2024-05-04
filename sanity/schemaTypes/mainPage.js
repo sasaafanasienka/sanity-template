@@ -1,4 +1,4 @@
-import { field, document } from "../../utils"
+import { field, document } from "../../sanity-utils"
 
 export const mainPage = document.create('Main page', [
   field.string('Tag'),

@@ -1,8 +1,10 @@
+// const ROOT_ALIAS = 'root'; // TODO: move to constants somehow
 
-{
+module.exports = {
   "env": {
-    "browser": true,
-    "es2021": true
+		"browser": true,
+		"es2021": true,
+		"node": true
   },
   "settings": {
     "react": {
@@ -15,33 +17,13 @@
         "pattern": "@app/*"
       },
       {
-        "type": "processes",
-        "pattern": "@processes/*"
-      },
-      {
-        "type": "pages",
-        "pattern": "@pages/*"
-      },
-      {
-        "type": "widgets",
-        "pattern": "@widgets/*"
-      },
-      {
-        "type": "features",
-        "pattern": "@features/*"
-      },
-      {
-        "type": "entities",
-        "pattern": "@entities/*"
+        "type": "sections",
+        "pattern": "@sections/*"
       },
       {
         "type": "shared",
         "pattern": "@shared/*"
       },
-      {
-        "type": "test-utils",
-        "pattern": "@test-utils/*"
-      }
     ]
   },
   "ignorePatterns": [
@@ -62,26 +44,76 @@
     "standard",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
     "react-app",
     "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": { "jsx": true },
-    "project": "./tsconfig.json",
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
+  // "parserOptions": {
+  //   "ecmaFeatures": { "jsx": true, "tsx": true },
+  //   "project": "./tsconfig.json",
+  //   "ecmaVersion": "latest",
+  //   "sourceType": "module"
+  // },
   "plugins": [
     "react",
-    "@typescript-eslint",
     "prettier",
+    "@typescript-eslint",
     "import",
     "@typescript-eslint/eslint-plugin"
   ],
   "rules": {
+    'prettier/prettier': [1],
+		// 'no-restricted-imports': [
+		// 	2,
+		// 	{
+		// 		patterns: [`${ROOT_ALIAS}/*/*`, '../*'],
+		// 	},
+		// ],
+		'no-param-reassign': [
+			2,
+			{
+				props: true,
+				ignorePropertyModificationsForRegex: ['.*(Element|Node)$'],
+			},
+		],
+		'no-implicit-coercion': [
+			2,
+			{
+				boolean: true,
+				number: true,
+				string: true,
+				disallowTemplateShorthand: true,
+				allow: [],
+			},
+		],
+		'import/order': [
+			'error',
+			{
+				'newlines-between': 'always',
+				alphabetize: {
+					order: 'asc',
+					caseInsensitive: true,
+				},
+				pathGroups: [
+					{
+						pattern: `${ROOT_ALIAS}/**/*`,
+						group: 'parent',
+					},
+					{
+						pattern: './*',
+						group: 'sibling',
+					},
+				],
+			},
+		],
+		'import/no-unresolved': [2, { ignore: ['\\.?inline$'] }],
+		'import/prefer-default-export': 0,
+		'unicorn/no-for-loop': 0,
+		'unicorn/no-array-for-each': 0,
+		'unicorn/explicit-length-check': 0,
     "jsx-a11y/anchor-has-content": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "no-console": "error",
@@ -92,9 +124,9 @@
     ],
     "import/no-anonymous-default-export": "off",
     "import/order": [
-      "error",
+      error,
       {
-        "pathGroups": [
+        pathGroups: [
           {
             "pattern": "react",
             "group": "external",
@@ -159,13 +191,13 @@
     ],
     "comma-dangle": [
       "error",
-      "always-multiline"
-//      {
-//        "imports": "only-multiline",
-//        "arrays": "only-multiline",
-//        "objects": "only-multiline",
-//        "functions": "only-multiline",
-//      }
+      "always-multiline",
+      {
+        "imports": "only-multiline",
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "functions": "only-multiline"
+      }
     ],
     "no-unused-vars": [
       "error",

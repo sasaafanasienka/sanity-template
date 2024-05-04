@@ -1,4 +1,4 @@
-import { document, field } from "../../utils"
+import { document, field } from "../../sanity-utils"
 
 export const category = document.create('Category', [
   field.string('Title'),

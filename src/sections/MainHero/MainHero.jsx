@@ -1,19 +1,17 @@
-import { Section, Container, Button } from '@/shared/ui'
+import { Section, Container, Button } from '@shared/ui'
 import React from 'react'
 import './MainHero.scss'
-import { client } from '@/utils/sanity'
+import client from '@shared/client'
 import { Img, Lottie, Video } from '@/shared/lib'
 
 export const MainHero = async () => {
 
   const mainPages = await client.fetch(`*[_type == "mainPage"]` )
-  const page = mainPages[0]
+  const page = mainPages[0] 
 
-  console.log(page)
-
-  return (
+  return ( 
     <Section className="pt-0 grow flex flex-col">
-      <Container className="flex flex-col grow w-full">
+      {/* <Container className="flex flex-col grow w-full">
         <div className="hero">
           <div className='flex flex-col gap-4'>
             <p className='paragraph'>{page.tag}</p>
@@ -26,7 +24,7 @@ export const MainHero = async () => {
             <Video video={page.videoInstruction} />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </Section>
   )
 }

@@ -5,5 +5,5 @@ import { author } from './schemaTypes/author'
 import { mainPage } from './schemaTypes/mainPage'
 
 export const schema = {
-  types: [post, author, category, blockContent, mainPage],
+  types: [mainPage, blockContent, category, post, author],
 }
