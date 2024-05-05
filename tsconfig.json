@@ -23,7 +23,7 @@
     },
     /* Config fields from VMS */
     "useDefineForClassFields": true,
-    "allowJs": false,
+    "allowJs": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

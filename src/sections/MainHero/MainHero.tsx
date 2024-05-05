@@ -3,7 +3,7 @@ import React from 'react'
 import './MainHero.scss'
 import Link from 'next/link'
 
-export const MainHero = () => {   
+export const MainHero = () => {      
   return ( 
     <Section className="pt-0 grow flex flex-col">
       <Container className="flex flex-col grow w-full">
