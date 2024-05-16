@@ -10,16 +10,6 @@
 @import './reset/reset.scss';
 @import './kit/kit.scss';
 
-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100svh;
-  background-color: var(--color-light);
-  color: var(--color-dark);
-  font-family: var(Inter);
-}
-
 main {
   flex-grow: 1;
   padding: 0;

@@ -1,8 +1,7 @@
-import { Button, Container } from '@/shared/ui'
+import { Button, Container } from '@shared/ui'
 import Link from 'next/link'
 
 import './Navbar.scss';
-import { Flex } from '@mantine/core';
 
 export const Navbar = () => {
   return (

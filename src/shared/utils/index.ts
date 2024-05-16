@@ -1,5 +1,4 @@
-// import { useClient } from 'sanity'
 
 export { combine } from './combine/combine'
+export { urlFile } from './sanity'
 
-clie

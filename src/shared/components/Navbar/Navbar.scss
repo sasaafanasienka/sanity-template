@@ -1,4 +1,7 @@
 .navbar {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
   height: 5rem;
   & .navbar__container {
     height: 100%;

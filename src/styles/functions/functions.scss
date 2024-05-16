@@ -4,3 +4,28 @@
   $result: clamp(#{$minValue / 16}rem, #{$yIntercept / 16}rem + #{$slope * 100}vw, #{$maxValue / 16}rem);
   @return $result;
 }
+
+@function create-color-variables($colors) {
+  $variables: ();
+
+  @each $color in $colors {
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+
+    // Создание переменной для основного цвета
+    $variables: map-merge($variables, (
+      '--color-#{$color-name}': $color-value
+    ));
+
+    // Создание переменных с градациями прозрачности
+    @for $i from 0 through 9 {
+      $alpha: $i / 10;
+      $rgba: rgba($color-value, $alpha);
+      $variables: map-merge($variables, (
+        '--color-#{$color-name}-#{$i}': $rgba
+      ));
+    }
+  }
+
+  @return $variables;
+}

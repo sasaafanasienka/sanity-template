@@ -1,8 +1,5 @@
 .container {
   max-width: 90rem;
   margin: 0 auto;
-  padding-inline: 2.5rem;
-  @media screen and (max-width:768px) {
-    padding-inline: 1rem;
-  }
+  padding-inline: adapt(16, 40);
 }

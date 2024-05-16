@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@sanity/*": ["sanity/*"],
+      "@sanity-utils/*": ["sanity-utils/*"],
+      "@sections/*": ["src/sections/*"],
+      "@shared/*": ["src/shared/*"],
+      "@app/*": ["src/app/*"],
+      "@utils/*": ["src/utils/*"],
+    },
     "lib": [
       "dom",
       "dom.iterable",
@@ -12,7 +21,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -27,7 +36,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/sections/MainHero/MainHero.jsx"  ],
+, "src/sections/main-hero/MainHero.tsx"  ],
   "exclude": [
     "node_modules"
   ]

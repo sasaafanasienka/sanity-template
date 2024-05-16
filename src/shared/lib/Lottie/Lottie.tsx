@@ -1,11 +1,12 @@
 'use client'
 
-import { urlFile } from '@/utils/sanity';
 import lottieWeb from 'lottie-web';
 import { useEffect, useRef, useState } from 'react';
 import './Lottie.scss';
+import { urlFile } from '@shared/utils';
 
-export const Lottie = ({ lottie, options, ...props }) => {
+
+export const Lottie = ({ lottie, options = {}, ...props }) => {
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -17,7 +18,7 @@ export const Lottie = ({ lottie, options, ...props }) => {
         lottieWeb.loadAnimation({
           container: lottieRef.current,
           animationData: data,
-          rendered: 'svg',
+          renderer: 'svg',
           loop: true
         })
         setIsLoaded(true)
